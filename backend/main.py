@@ -41,7 +41,9 @@ async def chat(request: ChatRequest):
         gemini_response = gemini_client.chat_response(request.message)
         return ChatResponse(response=gemini_response)
     except Exception as e:
-        return ChatResponse(response=f"エラーが発生しました: {str(e)}")
+        import logging
+        logging.error("An error occurred in the chat endpoint", exc_info=True)
+        return ChatResponse(response="エラーが発生しました。後でもう一度お試しください。")
 
 
 @app.get("/test-gemini")
