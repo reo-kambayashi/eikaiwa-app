@@ -1,0 +1,15 @@
+.textbox {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.textbox:focus {
+    outline: none;
+    border-color: #61dafb;
+    box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.1);
+}
