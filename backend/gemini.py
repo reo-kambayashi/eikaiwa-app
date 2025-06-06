@@ -22,7 +22,8 @@ class GeminiClient:
             response = self.model.generate_content(prompt)
             return response.text
         except Exception as e:
-            return f"エラーが発生しました: {str(e)}"
+            logging.error("An error occurred while generating a response", exc_info=True)
+            return "エラーが発生しました。しばらくしてからもう一度お試しください。"
 
     def chat_response(self, message: str) -> str:
         prompt = f"""
