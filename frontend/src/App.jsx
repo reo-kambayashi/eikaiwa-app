@@ -39,7 +39,9 @@ function App() {
             {response && (
                 <div style={{ marginTop: '20px', padding: '10px', background: '#f0f0f0' }}>
                     <h3>Geminiの返答:</h3>
-                    <p>{response}</p>
+                    <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'inherit' }}>
+                        {response}
+                    </pre>
                 </div>
             )}
         </div>
